@@ -1,0 +1,81 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<head>
+<title>index_admin</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />	
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="./css/responsiveslides.css">
+<script src="./js/jquery.min.js"></script>
+<script src="./js/responsiveslides.min.js"></script>
+		  <script>
+		    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 1
+			      $("#slider1").responsiveSlides({
+			        maxwidth: 2500,
+			        speed: 600
+			      });
+			});
+		  </script>
+ </head>
+    <body>
+		<!---start-header---->
+			<div class="header">
+				<div class="wrap">
+				<div class="logo">
+					<a href="#"><img src="images/logo1.png" title="logo" width="109" height="62"/></a>
+				</div>
+				<div class="top-nav">
+					<ul>
+						<li class="active"><a href="index_admin.html">home page</a></li>					
+						<li><a href="aboutus.html">About us</a></li>
+					
+					     <button type="button" onclick="logout()">LOG OUT
+					</ul>
+				</div>
+				<div class="clear"> </div>
+			</div>
+		</div>
+			<!---End-header---->
+		<!--start-image-slider---->
+					<div class="image-slider">
+						<!-- Slideshow 1 -->
+					    <ul class="rslides" id="slider1">
+					      <!--li><img src="./images/slider2.jpg" alt=""></li>
+					      
+						 <!-- Slideshow 2 -->
+					</div>
+                    
+			<!--End-image-slider---->
+           <div>music input<input type="text" id="music name">
+           <button type="button" onclick="search()">search</div>
+		<!---End-wrap---->
+		<!--div class="clear"> </div>
+		<!---start-content---->
+		<!---div class="content">
+			    <div class="content_top">
+			    	<div class="wrap">
+			    	  <h1><a href="#">WIPS</a></h1>
+			    	  <p>`Wi-Fi-based Indoor Position System (WIPS)’ is a software project to track the position changes of mobile facilities based on the Wi-Fi finger print detection. The project is used as the main thread of the DSD course 2020, co-located in Jilin University and Universidade de Trás-os-Montes e Alto Douro from Portugal.</p>
+						<span></span>
+					</div>
+			    </div>
+<!---End-content---->
+		
+	</body>
+     <script type="text/javascript" src="assets/js/jquery-1.8.2.min.js"></script>
+     <script type="text/javascript"> 
+    	function logout(){
+		window.location.href="login.html";
+	}
+		</script>
+</html>
+

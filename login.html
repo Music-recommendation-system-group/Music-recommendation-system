@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- CSS -->
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/supersized.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script type="text/javascript">
+function MM_callJS(jsStr) { //v2.0
+  return eval(jsStr)
+}
+        </script>
+</head>
+<script type="text/javascript" src="assets/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+		//定义log函数
+		function tz() {
+			var usrname=document.getElementById('name').value;
+			var passwd=document.getElementById('pass').value;
+			$.ajax({
+				url:"/server_account",
+				type:"POST",
+				data:JSON.stringify({"command": {"type": "login"},
+				      "username": usrname, 
+					  "password": passwd
+					  }),
+				dataType:"json",
+				success: function(msg){
+					console.log(msg);
+					if(JSON.stringify(msg.data)=="\"admin\""&&JSON.stringify(msg.errinfo)=="null"&&JSON.stringify(msg.success)=="true"){
+						window.location.href="index_admin.html";
+					}
+					else{
+						alert("please check the username and password!");
+					}
+				}
+			});
+	
+		}
+</script>
+
+    <body>
+        <div class="page-container">
+            <h1>Login</h1>
+            <form action="" method="post">
+                <input type="text" name="username" class="username" placeholder="username" id="name">
+                <input type="password" name="password" class="password" placeholder="password" id="pass">
+                <button type="button" onclick="tz()">Login</button>
+                <div class="error"><span>+</span></div>
+            </form>
+            <div class="connect">
+               
+               
+                   
+             
+            </div>
+        </div>
+        <div align="center"><a href="#" target="_blank" title=""></a></div>
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.8.2.min.js"></script>
+        <script src="assets/js/supersized.3.2.7.min.js"></script>
+        <script src="assets/js/supersized-init.js"></script>
+        <script src="assets/js/scripts.js"></script>
+    
+
+    </body>
+
+</html>
+
